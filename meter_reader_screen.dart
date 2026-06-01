@@ -99,11 +99,11 @@ class _ReaderDashboardTab extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Meter Reader', style: AppTextStyles.headlineLarge),
-                    const SizedBox(height: 2),
+                    SizedBox(height: 2),
                     Text('May 2025 — Assigned Meters', style: AppTextStyles.bodyMedium),
                   ],
                 ),
@@ -126,7 +126,7 @@ class _ReaderDashboardTab extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Submission Progress', style: AppTextStyles.titleMedium),
+                      const Text('Submission Progress', style: AppTextStyles.titleMedium),
                       Text('$_doneCount / ${_meters.length}', style: AppTextStyles.titleMedium.copyWith(color: AppColors.accentBlue)),
                     ],
                   ),
@@ -253,9 +253,9 @@ class _ReaderSubmitTabState extends State<_ReaderSubmitTab> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 16),
-            Text('Submit Reading', style: AppTextStyles.headlineLarge),
+            const Text('Submit Reading', style: AppTextStyles.headlineLarge),
             const SizedBox(height: 4),
-            Text('Scan QR code then enter the meter reading', style: AppTextStyles.bodyMedium),
+            const Text('Scan QR code then enter the meter reading', style: AppTextStyles.bodyMedium),
             const SizedBox(height: 20),
 
             if (!_submitted) ...[
@@ -303,7 +303,7 @@ class _ReaderSubmitTabState extends State<_ReaderSubmitTab> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Meter Info', style: AppTextStyles.titleMedium),
+                          const Text('Meter Info', style: AppTextStyles.titleMedium),
                           GestureDetector(
                             onTap: _resetScan,
                             child: const Text('Re-scan', style: TextStyle(fontSize: 11, color: AppColors.accentBlue, fontWeight: FontWeight.w500)),
@@ -328,7 +328,7 @@ class _ReaderSubmitTabState extends State<_ReaderSubmitTab> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Current Reading (kWh)', style: AppTextStyles.titleMedium),
+                      const Text('Current Reading (kWh)', style: AppTextStyles.titleMedium),
                       const SizedBox(height: 10),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
@@ -426,7 +426,7 @@ class _ReaderHistoryTab extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('My Submissions', style: AppTextStyles.headlineLarge),
+                const Text('My Submissions', style: AppTextStyles.headlineLarge),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(color: AppColors.surfaceRaised, borderRadius: BorderRadius.circular(8), border: Border.all(color: AppColors.border, width: 0.5)),
